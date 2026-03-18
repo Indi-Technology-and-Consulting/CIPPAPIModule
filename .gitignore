@@ -1,3 +1,4 @@
 /[Oo]utput
 /.vscode
 /.localonly
+*.py.bak
