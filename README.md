@@ -1,6 +1,6 @@
 ## What is this?
 
-This is the code for a [PowerShell](https://microsoft.com/powershell) module for [CIPP](https://cipp.app/). It is a work in progress, and only has about 207 out of the almost 350 API Endpoints built in. However, more will follow and it does have a generic 'Invoke-CIPPRestMethod' available so you can make any API call you want. See advanced usage examples below.
+This is the code for a [PowerShell](https://microsoft.com/powershell) module for [CIPP](https://cipp.app/). It is a work in progress, and only has about 350 out of the about 600 API Endpoints built in. However, more will follow and it does have a generic 'Invoke-CIPPRestMethod' available so you can make any API call you want. See advanced usage examples below.
 
 The module is written for [PowerShell 7](https://docs.microsoft.com/en-us/powershell/scripting/whats-new/what-s-new-in-powershell-71?view=powershell-7.1).
 
@@ -73,19 +73,22 @@ Some example scripts can be found Below:
 - [Get-AllTenants-SoftDeletedMailboxes.ps1](./Example%20Scripts/Get-AllTenants-SoftDeletedMailboxes.ps1)
 - [Get-AllTenants-LicensedUsers.ps1](./Example%20Scripts/Get-AllTenants-LicensedUsers.ps1)
 
-
 ## Assigning Yourself an Issue
 
-If you want to help by fixing a bug or implementing a feature request from an open issue, you can assign yourself the issue by creating a comment that says `I would like to work on this please!`. 
+If you want to help by fixing a bug or implementing a feature request from an open issue, you can assign yourself the issue by creating a comment that says `I would like to work on this please!`.
 You must enter that text exactly, otherwise the assignment does not trigger.
 
 # Cmdlet Help
+
 ## CIPP
+
 - Core
   - [Get-CIPPAccessCheck](./Docs/Get-CIPPAccessCheck.md)
   - [Get-CIPPAdminPortalLicenses](./Docs/Get-CIPPAdminPortalLicenses.md)
+  - [Get-CIPPAlertResults](./Docs/Get-CIPPAlertResults.md)
   - [Get-CIPPApplicationQueue](./Docs/Get-CIPPApplicationQueue.md)
   - [Get-CIPPAuditLogSearches](./Docs/Get-CIPPAuditLogSearches.md)
+  - [Get-CIPPAvailableTests](./Docs/Get-CIPPAvailableTests.md)
   - [Get-CIPPBackup](./Docs/Get-CIPPBackup.md)
   - [Get-CIPPCheckExternalAlerts](./Docs/Get-CIPPCheckExternalAlerts.md)
   - [Get-CIPPCommunityRepos](./Docs/Get-CIPPCommunityRepos.md)
@@ -93,12 +96,15 @@ You must enter that text exactly, otherwise the assignment does not trigger.
   - [Get-CIPPConnectionFilterTemplates](./Docs/Get-CIPPConnectionFilterTemplates.md)
   - [Get-CIPPCustomDataMappings](./Docs/Get-CIPPCustomDataMappings.md)
   - [Get-CIPPCustomRole](./Docs/Get-CIPPCustomRole.md)
+  - [Get-CIPPDBCache](./Docs/Get-CIPPDBCache.md)
+  - [Get-CIPPDiagnosticsPresets](./Docs/Get-CIPPDiagnosticsPresets.md)
   - [Get-CIPPDirectoryObjects](./Docs/Get-CIPPDirectoryObjects.md)
   - [Get-CIPPEmptyResult](./Docs/Get-CIPPEmptyResult.md)
   - [Get-CIPPExecAPIPermissionsList](./Docs/Get-CIPPExecAPIPermissionsList.md)
   - [Get-CIPPExoRequest](./Docs/Get-CIPPExoRequest.md)
   - [Get-CIPPExtensionCacheData](./Docs/Get-CIPPExtensionCacheData.md)
   - [Get-CIPPExtensionSync](./Docs/Get-CIPPExtensionSync.md)
+  - [Get-CIPPFeatureFlags](./Docs/Get-CIPPFeatureFlags.md)
   - [Get-CIPPFunctionParameters](./Docs/Get-CIPPFunctionParameters.md)
   - [Get-CIPPFunctionStats](./Docs/Get-CIPPFunctionStats.md)
   - [Get-CIPPGDAPAccessAssignments](./Docs/Get-CIPPGDAPAccessAssignments.md)
@@ -108,6 +114,7 @@ You must enter that text exactly, otherwise the assignment does not trigger.
   - [Get-CIPPKnownIPDB](./Docs/Get-CIPPKnownIPDB.md)
   - [Get-CIPPLogs](./Docs/Get-CIPPLogs.md)
   - [Get-CIPPQueue](./Docs/Get-CIPPQueue.md)
+  - [Get-CIPPSnoozedAlerts](./Docs/Get-CIPPSnoozedAlerts.md)
   - [Invoke-CIPPGraphBulkRequest](./Docs/Invoke-CIPPGraphBulkRequest.md)
   - [Remove-CIPPQueue](./Docs/Remove-CIPPQueue.md)
   - [Set-CIPPExecCPVPerms](./Docs/Set-CIPPExecCPVPerms.md)
@@ -120,21 +127,31 @@ You must enter that text exactly, otherwise the assignment does not trigger.
 - Security
   - [Get-CIPPTrustedIP](./Docs/Get-CIPPTrustedIP.md)
 - Settings
+  - [Get-CIPPCIPPUsers](./Docs/Get-CIPPCIPPUsers.md)
+  - [Get-CIPPContainerLogs](./Docs/Get-CIPPContainerLogs.md)
+  - [Get-CIPPCustomVariableCatalog](./Docs/Get-CIPPCustomVariableCatalog.md)
   - [Get-CIPPExcludedLicenses](./Docs/Get-CIPPExcludedLicenses.md)
   - [Get-CIPPExcludedTenants](./Docs/Get-CIPPExcludedTenants.md)
   - [Get-CIPPNotificationConfig](./Docs/Get-CIPPNotificationConfig.md)
   - [Get-CIPPTenantGroups](./Docs/Get-CIPPTenantGroups.md)
   - [Get-CIPPVersion](./Docs/Get-CIPPVersion.md)
+  - [Get-CIPPWorkerHealth](./Docs/Get-CIPPWorkerHealth.md)
   - [Set-CIPPExcludeLicense](./Docs/Set-CIPPExcludeLicense.md)
   - [Set-CIPPExcludeTenant](./Docs/Set-CIPPExcludeTenant.md)
   - [Set-CIPPPasswordSettings](./Docs/Set-CIPPPasswordSettings.md)
   - [Set-CIPPTenantGroup](./Docs/Set-CIPPTenantGroup.md)
+- Tools
+  - [Custom-Scripts](./Docs/Custom-Scripts.md)
+  - [Get-CIPPGeneratedReports](./Docs/Get-CIPPGeneratedReports.md)
+  - [Get-CIPPReportBuilderTemplates](./Docs/Get-CIPPReportBuilderTemplates.md)
 - Webhooks
   - [Get-CIPPPendingWebhooks](./Docs/Get-CIPPPendingWebhooks.md)
 - [Get-CIPPAccessCheck](./Docs/Get-CIPPAccessCheck.md)
 - [Get-CIPPAdminPortalLicenses](./Docs/Get-CIPPAdminPortalLicenses.md)
+- [Get-CIPPAlertResults](./Docs/Get-CIPPAlertResults.md)
 - [Get-CIPPApplicationQueue](./Docs/Get-CIPPApplicationQueue.md)
 - [Get-CIPPAuditLogSearches](./Docs/Get-CIPPAuditLogSearches.md)
+- [Get-CIPPAvailableTests](./Docs/Get-CIPPAvailableTests.md)
 - [Get-CIPPBackup](./Docs/Get-CIPPBackup.md)
 - [Get-CIPPCheckExternalAlerts](./Docs/Get-CIPPCheckExternalAlerts.md)
 - [Get-CIPPCommunityRepos](./Docs/Get-CIPPCommunityRepos.md)
@@ -142,12 +159,15 @@ You must enter that text exactly, otherwise the assignment does not trigger.
 - [Get-CIPPConnectionFilterTemplates](./Docs/Get-CIPPConnectionFilterTemplates.md)
 - [Get-CIPPCustomDataMappings](./Docs/Get-CIPPCustomDataMappings.md)
 - [Get-CIPPCustomRole](./Docs/Get-CIPPCustomRole.md)
+- [Get-CIPPDBCache](./Docs/Get-CIPPDBCache.md)
+- [Get-CIPPDiagnosticsPresets](./Docs/Get-CIPPDiagnosticsPresets.md)
 - [Get-CIPPDirectoryObjects](./Docs/Get-CIPPDirectoryObjects.md)
 - [Get-CIPPEmptyResult](./Docs/Get-CIPPEmptyResult.md)
 - [Get-CIPPExecAPIPermissionsList](./Docs/Get-CIPPExecAPIPermissionsList.md)
 - [Get-CIPPExoRequest](./Docs/Get-CIPPExoRequest.md)
 - [Get-CIPPExtensionCacheData](./Docs/Get-CIPPExtensionCacheData.md)
 - [Get-CIPPExtensionSync](./Docs/Get-CIPPExtensionSync.md)
+- [Get-CIPPFeatureFlags](./Docs/Get-CIPPFeatureFlags.md)
 - [Get-CIPPFunctionParameters](./Docs/Get-CIPPFunctionParameters.md)
 - [Get-CIPPFunctionStats](./Docs/Get-CIPPFunctionStats.md)
 - [Get-CIPPGDAPAccessAssignments](./Docs/Get-CIPPGDAPAccessAssignments.md)
@@ -157,6 +177,7 @@ You must enter that text exactly, otherwise the assignment does not trigger.
 - [Get-CIPPKnownIPDB](./Docs/Get-CIPPKnownIPDB.md)
 - [Get-CIPPLogs](./Docs/Get-CIPPLogs.md)
 - [Get-CIPPQueue](./Docs/Get-CIPPQueue.md)
+- [Get-CIPPSnoozedAlerts](./Docs/Get-CIPPSnoozedAlerts.md)
 - [Invoke-CIPPGraphBulkRequest](./Docs/Invoke-CIPPGraphBulkRequest.md)
 - [Remove-CIPPQueue](./Docs/Remove-CIPPQueue.md)
 - [Set-CIPPExecCPVPerms](./Docs/Set-CIPPExecCPVPerms.md)
@@ -166,17 +187,28 @@ You must enter that text exactly, otherwise the assignment does not trigger.
 - [Get-CIPPScheduledTask](./Docs/Get-CIPPScheduledTask.md)
 - [Remove-CIPPScheduledItem](./Docs/Remove-CIPPScheduledItem.md)
 - [Get-CIPPTrustedIP](./Docs/Get-CIPPTrustedIP.md)
+- [Get-CIPPCIPPUsers](./Docs/Get-CIPPCIPPUsers.md)
+- [Get-CIPPContainerLogs](./Docs/Get-CIPPContainerLogs.md)
+- [Get-CIPPCustomVariableCatalog](./Docs/Get-CIPPCustomVariableCatalog.md)
 - [Get-CIPPExcludedLicenses](./Docs/Get-CIPPExcludedLicenses.md)
 - [Get-CIPPExcludedTenants](./Docs/Get-CIPPExcludedTenants.md)
 - [Get-CIPPNotificationConfig](./Docs/Get-CIPPNotificationConfig.md)
 - [Get-CIPPTenantGroups](./Docs/Get-CIPPTenantGroups.md)
 - [Get-CIPPVersion](./Docs/Get-CIPPVersion.md)
+- [Get-CIPPWorkerHealth](./Docs/Get-CIPPWorkerHealth.md)
 - [Set-CIPPExcludeLicense](./Docs/Set-CIPPExcludeLicense.md)
 - [Set-CIPPExcludeTenant](./Docs/Set-CIPPExcludeTenant.md)
 - [Set-CIPPPasswordSettings](./Docs/Set-CIPPPasswordSettings.md)
 - [Set-CIPPTenantGroup](./Docs/Set-CIPPTenantGroup.md)
+- Custom-Scripts
+  - [Get-CIPPCustomScripts](./Docs/Get-CIPPCustomScripts.md)
+- [Get-CIPPGeneratedReports](./Docs/Get-CIPPGeneratedReports.md)
+- [Get-CIPPReportBuilderTemplates](./Docs/Get-CIPPReportBuilderTemplates.md)
+- [Get-CIPPCustomScripts](./Docs/Get-CIPPCustomScripts.md)
 - [Get-CIPPPendingWebhooks](./Docs/Get-CIPPPendingWebhooks.md)
+
 ## Email
+
 - Administration
   - [Add-CIPPContact](./Docs/Add-CIPPContact.md)
   - [Add-CIPPExchConnector](./Docs/Add-CIPPExchConnector.md)
@@ -220,6 +252,7 @@ You must enter that text exactly, otherwise the assignment does not trigger.
   - [Set-CIPPRetentionHold](./Docs/Set-CIPPRetentionHold.md)
   - [Start-CIPPManagedFolderAssistant](./Docs/Start-CIPPManagedFolderAssistant.md)
 - Reports
+  - [Get-CIPPActiveSyncDevices](./Docs/Get-CIPPActiveSyncDevices.md)
   - [Get-CIPPEnabledSharedMailboxes](./Docs/Get-CIPPEnabledSharedMailboxes.md)
   - [Get-CIPPGlobalAddressList](./Docs/Get-CIPPGlobalAddressList.md)
   - [Get-CIPPMailboxCAS](./Docs/Get-CIPPMailboxCAS.md)
@@ -243,6 +276,7 @@ You must enter that text exactly, otherwise the assignment does not trigger.
   - [Get-CIPPSpamFilter](./Docs/Get-CIPPSpamFilter.md)
   - [Get-CIPPSpamFilterTemplates](./Docs/Get-CIPPSpamFilterTemplates.md)
   - [Get-CIPPTenantAllowBlockList](./Docs/Get-CIPPTenantAllowBlockList.md)
+  - [Get-CIPPTenantAllowBlockListTemplates](./Docs/Get-CIPPTenantAllowBlockListTemplates.md)
   - [Remove-CIPPQuarantinePolicy](./Docs/Remove-CIPPQuarantinePolicy.md)
   - [Set-CIPPSpamFilter](./Docs/Set-CIPPSpamFilter.md)
 - Tools
@@ -303,6 +337,7 @@ You must enter that text exactly, otherwise the assignment does not trigger.
 - [Set-CIPPRecipientLimits](./Docs/Set-CIPPRecipientLimits.md)
 - [Set-CIPPRetentionHold](./Docs/Set-CIPPRetentionHold.md)
 - [Start-CIPPManagedFolderAssistant](./Docs/Start-CIPPManagedFolderAssistant.md)
+- [Get-CIPPActiveSyncDevices](./Docs/Get-CIPPActiveSyncDevices.md)
 - [Get-CIPPEnabledSharedMailboxes](./Docs/Get-CIPPEnabledSharedMailboxes.md)
 - [Get-CIPPGlobalAddressList](./Docs/Get-CIPPGlobalAddressList.md)
 - [Get-CIPPMailboxCAS](./Docs/Get-CIPPMailboxCAS.md)
@@ -324,6 +359,7 @@ You must enter that text exactly, otherwise the assignment does not trigger.
 - [Get-CIPPSpamFilter](./Docs/Get-CIPPSpamFilter.md)
 - [Get-CIPPSpamFilterTemplates](./Docs/Get-CIPPSpamFilterTemplates.md)
 - [Get-CIPPTenantAllowBlockList](./Docs/Get-CIPPTenantAllowBlockList.md)
+- [Get-CIPPTenantAllowBlockListTemplates](./Docs/Get-CIPPTenantAllowBlockListTemplates.md)
 - [Remove-CIPPQuarantinePolicy](./Docs/Remove-CIPPQuarantinePolicy.md)
 - [Set-CIPPSpamFilter](./Docs/Set-CIPPSpamFilter.md)
 - [Get-CIPPMailboxRestores](./Docs/Get-CIPPMailboxRestores.md)
@@ -341,17 +377,21 @@ You must enter that text exactly, otherwise the assignment does not trigger.
 - [Remove-CIPPTransportRuleTemplate](./Docs/Remove-CIPPTransportRuleTemplate.md)
 - [Set-CIPPExchConnector](./Docs/Set-CIPPExchConnector.md)
 - [Set-CIPPTransportRule](./Docs/Set-CIPPTransportRule.md)
+
 ## Endpoint
+
 - Applications
   - [Get-CIPPApps](./Docs/Get-CIPPApps.md)
   - [Get-CIPPAppsRepository](./Docs/Get-CIPPAppsRepository.md)
   - [Get-CIPPAppStatus](./Docs/Get-CIPPAppStatus.md)
+  - [Get-CIPPAppTemplates](./Docs/Get-CIPPAppTemplates.md)
   - [Get-CIPPPotentialApps](./Docs/Get-CIPPPotentialApps.md)
   - [Remove-CIPPIntuneApp](./Docs/Remove-CIPPIntuneApp.md)
   - [Remove-CIPPQueuedApp](./Docs/Remove-CIPPQueuedApp.md)
   - [Sync-CIPPVPPTokens](./Docs/Sync-CIPPVPPTokens.md)
 - Autopilot
   - [Add-CIPPAutopilotEnrollment](./Docs/Add-CIPPAutopilotEnrollment.md)
+  - [Get-CIPPAPDevices](./Docs/Get-CIPPAPDevices.md)
   - [Get-CIPPAutoPilotConfig](./Docs/Get-CIPPAutoPilotConfig.md)
   - [Get-CIPPAutoPilotDevices](./Docs/Get-CIPPAutoPilotDevices.md)
   - [New-CIPPAutopilotConfig](./Docs/New-CIPPAutopilotConfig.md)
@@ -361,23 +401,30 @@ You must enter that text exactly, otherwise the assignment does not trigger.
   - [Set-CIPPAutopilotDeviceGroupTag](./Docs/Set-CIPPAutopilotDeviceGroupTag.md)
   - [Set-CIPPAutoPilotSync](./Docs/Set-CIPPAutoPilotSync.md)
 - MEM
+  - [Get-CIPPAndroidEnrollmentProfiles](./Docs/Get-CIPPAndroidEnrollmentProfiles.md)
+  - [Get-CIPPAppleEnrollmentProfiles](./Docs/Get-CIPPAppleEnrollmentProfiles.md)
   - [Get-CIPPAppProtectionPolicies](./Docs/Get-CIPPAppProtectionPolicies.md)
   - [Get-CIPPAssignmentFilters](./Docs/Get-CIPPAssignmentFilters.md)
   - [Get-CIPPAssignmentFilterTemplates](./Docs/Get-CIPPAssignmentFilterTemplates.md)
   - [Get-CIPPCompliancePolicies](./Docs/Get-CIPPCompliancePolicies.md)
+  - [Get-CIPPCVEManagement](./Docs/Get-CIPPCVEManagement.md)
   - [Get-CIPPDeviceDetails](./Docs/Get-CIPPDeviceDetails.md)
   - [Get-CIPPGetBitLockerKey](./Docs/Get-CIPPGetBitLockerKey.md)
   - [Get-CIPPIntuneIntents](./Docs/Get-CIPPIntuneIntents.md)
   - [Get-CIPPIntunePolicy](./Docs/Get-CIPPIntunePolicy.md)
   - [Get-CIPPIntuneReusableSettings](./Docs/Get-CIPPIntuneReusableSettings.md)
+  - [Get-CIPPIntuneReusableSettingTemplates](./Docs/Get-CIPPIntuneReusableSettingTemplates.md)
   - [Get-CIPPIntuneScript](./Docs/Get-CIPPIntuneScript.md)
   - [Get-CIPPIntuneTemplates](./Docs/Get-CIPPIntuneTemplates.md)
   - [Get-CIPPLocalAdminPassword](./Docs/Get-CIPPLocalAdminPassword.md)
+  - [New-CIPPIntunePolicyClone](./Docs/New-CIPPIntunePolicyClone.md)
   - [Remove-CIPPAssignmentFilterTemplate](./Docs/Remove-CIPPAssignmentFilterTemplate.md)
   - [Remove-CIPPIntuneScript](./Docs/Remove-CIPPIntuneScript.md)
   - [Remove-CIPPIntuneTemplate](./Docs/Remove-CIPPIntuneTemplate.md)
   - [Remove-CIPPMEMPolicy](./Docs/Remove-CIPPMEMPolicy.md)
   - [Set-CIPPDeviceAction](./Docs/Set-CIPPDeviceAction.md)
+  - [Set-CIPPIntunePolicyAssignment](./Docs/Set-CIPPIntunePolicyAssignment.md)
+  - [Set-CIPPIntunePolicyDetails](./Docs/Set-CIPPIntunePolicyDetails.md)
   - [Set-CIPPMEMPolicy](./Docs/Set-CIPPMEMPolicy.md)
   - [Sync-CIPPDEPTokens](./Docs/Sync-CIPPDEPTokens.md)
 - Reports
@@ -385,11 +432,13 @@ You must enter that text exactly, otherwise the assignment does not trigger.
 - [Get-CIPPApps](./Docs/Get-CIPPApps.md)
 - [Get-CIPPAppsRepository](./Docs/Get-CIPPAppsRepository.md)
 - [Get-CIPPAppStatus](./Docs/Get-CIPPAppStatus.md)
+- [Get-CIPPAppTemplates](./Docs/Get-CIPPAppTemplates.md)
 - [Get-CIPPPotentialApps](./Docs/Get-CIPPPotentialApps.md)
 - [Remove-CIPPIntuneApp](./Docs/Remove-CIPPIntuneApp.md)
 - [Remove-CIPPQueuedApp](./Docs/Remove-CIPPQueuedApp.md)
 - [Sync-CIPPVPPTokens](./Docs/Sync-CIPPVPPTokens.md)
 - [Add-CIPPAutopilotEnrollment](./Docs/Add-CIPPAutopilotEnrollment.md)
+- [Get-CIPPAPDevices](./Docs/Get-CIPPAPDevices.md)
 - [Get-CIPPAutoPilotConfig](./Docs/Get-CIPPAutoPilotConfig.md)
 - [Get-CIPPAutoPilotDevices](./Docs/Get-CIPPAutoPilotDevices.md)
 - [New-CIPPAutopilotConfig](./Docs/New-CIPPAutopilotConfig.md)
@@ -398,27 +447,36 @@ You must enter that text exactly, otherwise the assignment does not trigger.
 - [Rename-CIPPAutopilotDevice](./Docs/Rename-CIPPAutopilotDevice.md)
 - [Set-CIPPAutopilotDeviceGroupTag](./Docs/Set-CIPPAutopilotDeviceGroupTag.md)
 - [Set-CIPPAutoPilotSync](./Docs/Set-CIPPAutoPilotSync.md)
+- [Get-CIPPAndroidEnrollmentProfiles](./Docs/Get-CIPPAndroidEnrollmentProfiles.md)
+- [Get-CIPPAppleEnrollmentProfiles](./Docs/Get-CIPPAppleEnrollmentProfiles.md)
 - [Get-CIPPAppProtectionPolicies](./Docs/Get-CIPPAppProtectionPolicies.md)
 - [Get-CIPPAssignmentFilters](./Docs/Get-CIPPAssignmentFilters.md)
 - [Get-CIPPAssignmentFilterTemplates](./Docs/Get-CIPPAssignmentFilterTemplates.md)
 - [Get-CIPPCompliancePolicies](./Docs/Get-CIPPCompliancePolicies.md)
+- [Get-CIPPCVEManagement](./Docs/Get-CIPPCVEManagement.md)
 - [Get-CIPPDeviceDetails](./Docs/Get-CIPPDeviceDetails.md)
 - [Get-CIPPGetBitLockerKey](./Docs/Get-CIPPGetBitLockerKey.md)
 - [Get-CIPPIntuneIntents](./Docs/Get-CIPPIntuneIntents.md)
 - [Get-CIPPIntunePolicy](./Docs/Get-CIPPIntunePolicy.md)
 - [Get-CIPPIntuneReusableSettings](./Docs/Get-CIPPIntuneReusableSettings.md)
+- [Get-CIPPIntuneReusableSettingTemplates](./Docs/Get-CIPPIntuneReusableSettingTemplates.md)
 - [Get-CIPPIntuneScript](./Docs/Get-CIPPIntuneScript.md)
 - [Get-CIPPIntuneTemplates](./Docs/Get-CIPPIntuneTemplates.md)
 - [Get-CIPPLocalAdminPassword](./Docs/Get-CIPPLocalAdminPassword.md)
+- [New-CIPPIntunePolicyClone](./Docs/New-CIPPIntunePolicyClone.md)
 - [Remove-CIPPAssignmentFilterTemplate](./Docs/Remove-CIPPAssignmentFilterTemplate.md)
 - [Remove-CIPPIntuneScript](./Docs/Remove-CIPPIntuneScript.md)
 - [Remove-CIPPIntuneTemplate](./Docs/Remove-CIPPIntuneTemplate.md)
 - [Remove-CIPPMEMPolicy](./Docs/Remove-CIPPMEMPolicy.md)
 - [Set-CIPPDeviceAction](./Docs/Set-CIPPDeviceAction.md)
+- [Set-CIPPIntunePolicyAssignment](./Docs/Set-CIPPIntunePolicyAssignment.md)
+- [Set-CIPPIntunePolicyDetails](./Docs/Set-CIPPIntunePolicyDetails.md)
 - [Set-CIPPMEMPolicy](./Docs/Set-CIPPMEMPolicy.md)
 - [Sync-CIPPDEPTokens](./Docs/Sync-CIPPDEPTokens.md)
 - [Get-CIPPDevices](./Docs/Get-CIPPDevices.md)
+
 ## Extensions
+
 - HaloPSA
   - [Get-CIPPHaloClients](./Docs/Get-CIPPHaloClients.md)
   - [Set-CIPPExtensionMappingHaloPSA](./Docs/Set-CIPPExtensionMappingHaloPSA.md)
@@ -431,7 +489,9 @@ You must enter that text exactly, otherwise the assignment does not trigger.
 - [Set-CIPPExtensionMappingHaloPSA](./Docs/Set-CIPPExtensionMappingHaloPSA.md)
 - [Set-CIPPNinjaOneQueue](./Docs/Set-CIPPNinjaOneQueue.md)
 - [Get-CIPPExtensionsConfig](./Docs/Get-CIPPExtensionsConfig.md)
+
 ## Identity
+
 - Administration
   - [Devices](./Docs/Devices.md)
   - [Groups](./Docs/Groups.md)
@@ -441,11 +501,15 @@ You must enter that text exactly, otherwise the assignment does not trigger.
   - [Get-CIPPBasicAuth](./Docs/Get-CIPPBasicAuth.md)
   - [Get-CIPPInactiveAccounts](./Docs/Get-CIPPInactiveAccounts.md)
   - [Get-CIPPMFAUsers](./Docs/Get-CIPPMFAUsers.md)
+  - [Get-CIPPObjectHistory](./Docs/Get-CIPPObjectHistory.md)
   - [Get-CIPPSignIns](./Docs/Get-CIPPSignIns.md)
 - Devices
+  - [Get-CIPPDetectedAppDevices](./Docs/Get-CIPPDetectedAppDevices.md)
+  - [Get-CIPPDetectedApps](./Docs/Get-CIPPDetectedApps.md)
   - [Remove-CIPPDevice](./Docs/Remove-CIPPDevice.md)
 - Groups
   - [Get-CIPPGroups](./Docs/Get-CIPPGroups.md)
+  - [Get-CIPPGroupSenderAuthentication](./Docs/Get-CIPPGroupSenderAuthentication.md)
   - [Get-CIPPGroupTemplates](./Docs/Get-CIPPGroupTemplates.md)
   - [Remove-CIPPGroup](./Docs/Remove-CIPPGroup.md)
   - [Remove-CIPPGroupTemplate](./Docs/Remove-CIPPGroupTemplate.md)
@@ -459,6 +523,8 @@ You must enter that text exactly, otherwise the assignment does not trigger.
   - [Get-CIPPBECCheck](./Docs/Get-CIPPBECCheck.md)
   - [Get-CIPPDeletedItems](./Docs/Get-CIPPDeletedItems.md)
   - [Get-CIPPJITAdmin](./Docs/Get-CIPPJITAdmin.md)
+  - [Get-CIPPJITAdminTemplates](./Docs/Get-CIPPJITAdminTemplates.md)
+  - [Get-CIPPNewUserDefaults](./Docs/Get-CIPPNewUserDefaults.md)
   - [Get-CIPPPerUserMFA](./Docs/Get-CIPPPerUserMFA.md)
   - [Get-CIPPUniversalSearch](./Docs/Get-CIPPUniversalSearch.md)
   - [Get-CIPPUserCAPolicies](./Docs/Get-CIPPUserCAPolicies.md)
@@ -467,7 +533,9 @@ You must enter that text exactly, otherwise the assignment does not trigger.
   - [Get-CIPPUserGroups](./Docs/Get-CIPPUserGroups.md)
   - [Get-CIPPUserPhoto](./Docs/Get-CIPPUserPhoto.md)
   - [Get-CIPPUsers](./Docs/Get-CIPPUsers.md)
+  - [Get-CIPPUsersAndGroups](./Docs/Get-CIPPUsersAndGroups.md)
   - [Get-CIPPUserSignIns](./Docs/Get-CIPPUserSignIns.md)
+  - [Get-CIPPUserTrustedBlockedSenders](./Docs/Get-CIPPUserTrustedBlockedSenders.md)
   - [Initialize-CIPPUserOneDrive](./Docs/Initialize-CIPPUserOneDrive.md)
   - [New-CIPPTemporaryAccessPass](./Docs/New-CIPPTemporaryAccessPass.md)
   - [New-CIPPUserOffboarding](./Docs/New-CIPPUserOffboarding.md)
@@ -484,8 +552,11 @@ You must enter that text exactly, otherwise the assignment does not trigger.
   - [Set-CIPPSignInStatus](./Docs/Set-CIPPSignInStatus.md)
   - [Set-CIPPUser](./Docs/Set-CIPPUser.md)
 - [Get-CIPPRoles](./Docs/Get-CIPPRoles.md)
+- [Get-CIPPDetectedAppDevices](./Docs/Get-CIPPDetectedAppDevices.md)
+- [Get-CIPPDetectedApps](./Docs/Get-CIPPDetectedApps.md)
 - [Remove-CIPPDevice](./Docs/Remove-CIPPDevice.md)
 - [Get-CIPPGroups](./Docs/Get-CIPPGroups.md)
+- [Get-CIPPGroupSenderAuthentication](./Docs/Get-CIPPGroupSenderAuthentication.md)
 - [Get-CIPPGroupTemplates](./Docs/Get-CIPPGroupTemplates.md)
 - [Remove-CIPPGroup](./Docs/Remove-CIPPGroup.md)
 - [Remove-CIPPGroupTemplate](./Docs/Remove-CIPPGroupTemplate.md)
@@ -498,6 +569,8 @@ You must enter that text exactly, otherwise the assignment does not trigger.
 - [Get-CIPPBECCheck](./Docs/Get-CIPPBECCheck.md)
 - [Get-CIPPDeletedItems](./Docs/Get-CIPPDeletedItems.md)
 - [Get-CIPPJITAdmin](./Docs/Get-CIPPJITAdmin.md)
+- [Get-CIPPJITAdminTemplates](./Docs/Get-CIPPJITAdminTemplates.md)
+- [Get-CIPPNewUserDefaults](./Docs/Get-CIPPNewUserDefaults.md)
 - [Get-CIPPPerUserMFA](./Docs/Get-CIPPPerUserMFA.md)
 - [Get-CIPPUniversalSearch](./Docs/Get-CIPPUniversalSearch.md)
 - [Get-CIPPUserCAPolicies](./Docs/Get-CIPPUserCAPolicies.md)
@@ -506,7 +579,9 @@ You must enter that text exactly, otherwise the assignment does not trigger.
 - [Get-CIPPUserGroups](./Docs/Get-CIPPUserGroups.md)
 - [Get-CIPPUserPhoto](./Docs/Get-CIPPUserPhoto.md)
 - [Get-CIPPUsers](./Docs/Get-CIPPUsers.md)
+- [Get-CIPPUsersAndGroups](./Docs/Get-CIPPUsersAndGroups.md)
 - [Get-CIPPUserSignIns](./Docs/Get-CIPPUserSignIns.md)
+- [Get-CIPPUserTrustedBlockedSenders](./Docs/Get-CIPPUserTrustedBlockedSenders.md)
 - [Initialize-CIPPUserOneDrive](./Docs/Initialize-CIPPUserOneDrive.md)
 - [New-CIPPTemporaryAccessPass](./Docs/New-CIPPTemporaryAccessPass.md)
 - [New-CIPPUserOffboarding](./Docs/New-CIPPUserOffboarding.md)
@@ -525,8 +600,24 @@ You must enter that text exactly, otherwise the assignment does not trigger.
 - [Get-CIPPBasicAuth](./Docs/Get-CIPPBasicAuth.md)
 - [Get-CIPPInactiveAccounts](./Docs/Get-CIPPInactiveAccounts.md)
 - [Get-CIPPMFAUsers](./Docs/Get-CIPPMFAUsers.md)
+- [Get-CIPPObjectHistory](./Docs/Get-CIPPObjectHistory.md)
 - [Get-CIPPSignIns](./Docs/Get-CIPPSignIns.md)
+
 ## Security
+
+- Compliance-DLP
+  - [Get-CIPPDlpCompliancePolicy](./Docs/Get-CIPPDlpCompliancePolicy.md)
+  - [Get-CIPPDlpCompliancePolicyTemplates](./Docs/Get-CIPPDlpCompliancePolicyTemplates.md)
+- Compliance-Retention
+  - [Get-CIPPRetentionCompliancePolicy](./Docs/Get-CIPPRetentionCompliancePolicy.md)
+  - [Get-CIPPRetentionCompliancePolicyTemplates](./Docs/Get-CIPPRetentionCompliancePolicyTemplates.md)
+- Compliance-SensitivityLabel
+  - [Get-CIPPSensitivityLabel](./Docs/Get-CIPPSensitivityLabel.md)
+  - [Get-CIPPSensitivityLabelTemplates](./Docs/Get-CIPPSensitivityLabelTemplates.md)
+- Compliance-SIT
+  - [Get-CIPPSensitiveInfoType](./Docs/Get-CIPPSensitiveInfoType.md)
+  - [Get-CIPPSensitiveInfoTypeRulePackage](./Docs/Get-CIPPSensitiveInfoTypeRulePackage.md)
+  - [Get-CIPPSensitiveInfoTypeTemplates](./Docs/Get-CIPPSensitiveInfoTypeTemplates.md)
 - Defender
   - [Get-CIPPDefenderOnboarding](./Docs/Get-CIPPDefenderOnboarding.md)
   - [Get-CIPPDefenderState](./Docs/Get-CIPPDefenderState.md)
@@ -542,6 +633,20 @@ You must enter that text exactly, otherwise the assignment does not trigger.
   - [Get-CIPPBreachesTenant](./Docs/Get-CIPPBreachesTenant.md)
   - [Get-CIPPBreachSearch](./Docs/Get-CIPPBreachSearch.md)
   - [Get-CIPPDeviceCompliance](./Docs/Get-CIPPDeviceCompliance.md)
+  - [Get-CIPPSecureScore](./Docs/Get-CIPPSecureScore.md)
+- Safe-Links-Policy
+  - [Get-CIPPSafeLinksPolicy](./Docs/Get-CIPPSafeLinksPolicy.md)
+  - [Get-CIPPSafeLinksPolicyDetails](./Docs/Get-CIPPSafeLinksPolicyDetails.md)
+  - [Get-CIPPSafeLinksPolicyTemplateDetails](./Docs/Get-CIPPSafeLinksPolicyTemplateDetails.md)
+- [Get-CIPPDlpCompliancePolicy](./Docs/Get-CIPPDlpCompliancePolicy.md)
+- [Get-CIPPDlpCompliancePolicyTemplates](./Docs/Get-CIPPDlpCompliancePolicyTemplates.md)
+- [Get-CIPPRetentionCompliancePolicy](./Docs/Get-CIPPRetentionCompliancePolicy.md)
+- [Get-CIPPRetentionCompliancePolicyTemplates](./Docs/Get-CIPPRetentionCompliancePolicyTemplates.md)
+- [Get-CIPPSensitivityLabel](./Docs/Get-CIPPSensitivityLabel.md)
+- [Get-CIPPSensitivityLabelTemplates](./Docs/Get-CIPPSensitivityLabelTemplates.md)
+- [Get-CIPPSensitiveInfoType](./Docs/Get-CIPPSensitiveInfoType.md)
+- [Get-CIPPSensitiveInfoTypeRulePackage](./Docs/Get-CIPPSensitiveInfoTypeRulePackage.md)
+- [Get-CIPPSensitiveInfoTypeTemplates](./Docs/Get-CIPPSensitiveInfoTypeTemplates.md)
 - [Get-CIPPDefenderOnboarding](./Docs/Get-CIPPDefenderOnboarding.md)
 - [Get-CIPPDefenderState](./Docs/Get-CIPPDefenderState.md)
 - [Get-CIPPDefenderTVM](./Docs/Get-CIPPDefenderTVM.md)
@@ -554,21 +659,39 @@ You must enter that text exactly, otherwise the assignment does not trigger.
 - [Get-CIPPBreachesTenant](./Docs/Get-CIPPBreachesTenant.md)
 - [Get-CIPPBreachSearch](./Docs/Get-CIPPBreachSearch.md)
 - [Get-CIPPDeviceCompliance](./Docs/Get-CIPPDeviceCompliance.md)
+- [Get-CIPPSecureScore](./Docs/Get-CIPPSecureScore.md)
+- [Get-CIPPSafeLinksPolicy](./Docs/Get-CIPPSafeLinksPolicy.md)
+- [Get-CIPPSafeLinksPolicyDetails](./Docs/Get-CIPPSafeLinksPolicyDetails.md)
+- [Get-CIPPSafeLinksPolicyTemplateDetails](./Docs/Get-CIPPSafeLinksPolicyTemplateDetails.md)
+
 ## Settings
+
 - [Invoke-CIPPSchedulerBillingRun](./Docs/Invoke-CIPPSchedulerBillingRun.md)
+
 ## Teams
+
 - Voice
   - [Get-CIPPTeamsLisLocation](./Docs/Get-CIPPTeamsLisLocation.md)
 - [Get-CIPPTeamsLisLocation](./Docs/Get-CIPPTeamsLisLocation.md)
+
 ## Teams-Sharepoint
+
 - OneDrive
   - [Get-CIPPOneDriveList](./Docs/Get-CIPPOneDriveList.md)
   - [Set-CIPPOneDrivePerms](./Docs/Set-CIPPOneDrivePerms.md)
   - [Set-CIPPOneDriveShortCut](./Docs/Set-CIPPOneDriveShortCut.md)
 - Sharepoint
   - [Add-CIPPSharePointSite](./Docs/Add-CIPPSharePointSite.md)
+  - [Get-CIPPDeletedSites](./Docs/Get-CIPPDeletedSites.md)
+  - [Get-CIPPSharePointExternalUsers](./Docs/Get-CIPPSharePointExternalUsers.md)
   - [Get-CIPPSharePointQuota](./Docs/Get-CIPPSharePointQuota.md)
+  - [Get-CIPPSharePointSharing](./Docs/Get-CIPPSharePointSharing.md)
   - [Get-CIPPSharePointSites](./Docs/Get-CIPPSharePointSites.md)
+  - [Get-CIPPSiteLibraries](./Docs/Get-CIPPSiteLibraries.md)
+  - [Get-CIPPSiteMembers](./Docs/Get-CIPPSiteMembers.md)
+  - [Get-CIPPSiteProperties](./Docs/Get-CIPPSiteProperties.md)
+  - [Get-CIPPSiteRecycleBin](./Docs/Get-CIPPSiteRecycleBin.md)
+  - [Get-CIPPSPOVersionCleanup](./Docs/Get-CIPPSPOVersionCleanup.md)
   - [Remove-CIPPSharePointSite](./Docs/Remove-CIPPSharePointSite.md)
   - [Set-CIPPSharePointSiteAdmin](./Docs/Set-CIPPSharePointSiteAdmin.md)
   - [Set-CIPPSharePointSiteMembers](./Docs/Set-CIPPSharePointSiteMembers.md)
@@ -582,8 +705,16 @@ You must enter that text exactly, otherwise the assignment does not trigger.
 - [Set-CIPPOneDrivePerms](./Docs/Set-CIPPOneDrivePerms.md)
 - [Set-CIPPOneDriveShortCut](./Docs/Set-CIPPOneDriveShortCut.md)
 - [Add-CIPPSharePointSite](./Docs/Add-CIPPSharePointSite.md)
+- [Get-CIPPDeletedSites](./Docs/Get-CIPPDeletedSites.md)
+- [Get-CIPPSharePointExternalUsers](./Docs/Get-CIPPSharePointExternalUsers.md)
 - [Get-CIPPSharePointQuota](./Docs/Get-CIPPSharePointQuota.md)
+- [Get-CIPPSharePointSharing](./Docs/Get-CIPPSharePointSharing.md)
 - [Get-CIPPSharePointSites](./Docs/Get-CIPPSharePointSites.md)
+- [Get-CIPPSiteLibraries](./Docs/Get-CIPPSiteLibraries.md)
+- [Get-CIPPSiteMembers](./Docs/Get-CIPPSiteMembers.md)
+- [Get-CIPPSiteProperties](./Docs/Get-CIPPSiteProperties.md)
+- [Get-CIPPSiteRecycleBin](./Docs/Get-CIPPSiteRecycleBin.md)
+- [Get-CIPPSPOVersionCleanup](./Docs/Get-CIPPSPOVersionCleanup.md)
 - [Remove-CIPPSharePointSite](./Docs/Remove-CIPPSharePointSite.md)
 - [Set-CIPPSharePointSiteAdmin](./Docs/Set-CIPPSharePointSiteAdmin.md)
 - [Set-CIPPSharePointSiteMembers](./Docs/Set-CIPPSharePointSiteMembers.md)
@@ -591,7 +722,9 @@ You must enter that text exactly, otherwise the assignment does not trigger.
 - [Get-CIPPTeams](./Docs/Get-CIPPTeams.md)
 - [Get-CIPPTeamsActivity](./Docs/Get-CIPPTeamsActivity.md)
 - [Get-CIPPTeamsVoice](./Docs/Get-CIPPTeamsVoice.md)
+
 ## Tenant
+
 - Administration
   - [Alerts](./Docs/Alerts.md)
   - [Applications](./Docs/Applications.md)
@@ -599,6 +732,7 @@ You must enter that text exactly, otherwise the assignment does not trigger.
   - [Tenant](./Docs/Tenant.md)
   - [Get-CIPPAppConsentReqs](./Docs/Get-CIPPAppConsentReqs.md)
   - [Get-CIPPDomains](./Docs/Get-CIPPDomains.md)
+  - [Get-CIPPOffboardTenants](./Docs/Get-CIPPOffboardTenants.md)
   - [Get-CIPPTenantOnboarding](./Docs/Get-CIPPTenantOnboarding.md)
   - [Remove-CIPPTenantAllowBlockList](./Docs/Remove-CIPPTenantAllowBlockList.md)
   - [Set-CIPPAuthenticationMethod](./Docs/Set-CIPPAuthenticationMethod.md)
@@ -610,23 +744,38 @@ You must enter that text exactly, otherwise the assignment does not trigger.
   - [Remove-CIPPCATemplate](./Docs/Remove-CIPPCATemplate.md)
   - [Set-CIPPCAPolicy](./Docs/Set-CIPPCAPolicy.md)
 - GDAP
+  - [Get-CIPPGDAPContracts](./Docs/Get-CIPPGDAPContracts.md)
   - [Get-CIPPGDAPInvite](./Docs/Get-CIPPGDAPInvite.md)
+  - [Get-CIPPGDAPRelationships](./Docs/Get-CIPPGDAPRelationships.md)
   - [Get-CIPPGDAPRoles](./Docs/Get-CIPPGDAPRoles.md)
+  - [Get-CIPPGDAPServicePrincipals](./Docs/Get-CIPPGDAPServicePrincipals.md)
+  - [Get-CIPPResellerRelationshipLink](./Docs/Get-CIPPResellerRelationshipLink.md)
   - [New-CIPPGDAPInvite](./Docs/New-CIPPGDAPInvite.md)
   - [Remove-CIPPGDAPRelationship](./Docs/Remove-CIPPGDAPRelationship.md)
 - Reports
+  - [Get-CIPPGraphReports](./Docs/Get-CIPPGraphReports.md)
   - [Get-CIPPLicenses](./Docs/Get-CIPPLicenses.md)
+  - [Get-CIPPLicensesReport](./Docs/Get-CIPPLicensesReport.md)
   - [Get-CIPPOAuthApps](./Docs/Get-CIPPOAuthApps.md)
   - [Get-CIPPServiceHealth](./Docs/Get-CIPPServiceHealth.md)
+  - [Get-CIPPTestReports](./Docs/Get-CIPPTestReports.md)
+  - [Get-CIPPTestResultsTenants](./Docs/Get-CIPPTestResultsTenants.md)
+  - [Get-CIPPTests](./Docs/Get-CIPPTests.md)
 - Standards
+  - [Get-CIPPAgent365PackageDetail](./Docs/Get-CIPPAgent365PackageDetail.md)
+  - [Get-CIPPAgent365Packages](./Docs/Get-CIPPAgent365Packages.md)
   - [Get-CIPPBestPracticeAnalyser](./Docs/Get-CIPPBestPracticeAnalyser.md)
   - [Get-CIPPBPA](./Docs/Get-CIPPBPA.md)
   - [Get-CIPPBPATemplates](./Docs/Get-CIPPBPATemplates.md)
+  - [Get-CIPPCopilotSettings](./Docs/Get-CIPPCopilotSettings.md)
+  - [Get-CIPPCopilotUsage](./Docs/Get-CIPPCopilotUsage.md)
   - [Get-CIPPDomainAnalyser](./Docs/Get-CIPPDomainAnalyser.md)
   - [Get-CIPPDomainAnalyserList](./Docs/Get-CIPPDomainAnalyserList.md)
   - [Get-CIPPDomainHealth](./Docs/Get-CIPPDomainHealth.md)
+  - [Get-CIPPShadowAI](./Docs/Get-CIPPShadowAI.md)
   - [Get-CIPPStandards](./Docs/Get-CIPPStandards.md)
   - [Get-CIPPStandardsCompare](./Docs/Get-CIPPStandardsCompare.md)
+  - [Get-CIPPStandardsCurrentState](./Docs/Get-CIPPStandardsCurrentState.md)
   - [Get-CIPPStandardTemplates](./Docs/Get-CIPPStandardTemplates.md)
   - [Get-CIPPTenantAlignment](./Docs/Get-CIPPTenantAlignment.md)
   - [Get-CIPPTenantDrift](./Docs/Get-CIPPTenantDrift.md)
@@ -643,6 +792,7 @@ You must enter that text exactly, otherwise the assignment does not trigger.
 - Alerts
   - [Get-CIPPAlerts](./Docs/Get-CIPPAlerts.md)
   - [Get-CIPPAuditLog](./Docs/Get-CIPPAuditLog.md)
+  - [Get-CIPPAuditLogCoverage](./Docs/Get-CIPPAuditLogCoverage.md)
   - [Get-CIPPWebhookAlert](./Docs/Get-CIPPWebhookAlert.md)
   - [Remove-CIPPQueuedAlert](./Docs/Remove-CIPPQueuedAlert.md)
 - Applications
@@ -665,11 +815,13 @@ You must enter that text exactly, otherwise the assignment does not trigger.
   - [Set-CIPPCustomVariable](./Docs/Set-CIPPCustomVariable.md)
 - [Get-CIPPAppConsentReqs](./Docs/Get-CIPPAppConsentReqs.md)
 - [Get-CIPPDomains](./Docs/Get-CIPPDomains.md)
+- [Get-CIPPOffboardTenants](./Docs/Get-CIPPOffboardTenants.md)
 - [Get-CIPPTenantOnboarding](./Docs/Get-CIPPTenantOnboarding.md)
 - [Remove-CIPPTenantAllowBlockList](./Docs/Remove-CIPPTenantAllowBlockList.md)
 - [Set-CIPPAuthenticationMethod](./Docs/Set-CIPPAuthenticationMethod.md)
 - [Get-CIPPAlerts](./Docs/Get-CIPPAlerts.md)
 - [Get-CIPPAuditLog](./Docs/Get-CIPPAuditLog.md)
+- [Get-CIPPAuditLogCoverage](./Docs/Get-CIPPAuditLogCoverage.md)
 - [Get-CIPPWebhookAlert](./Docs/Get-CIPPWebhookAlert.md)
 - [Remove-CIPPQueuedAlert](./Docs/Remove-CIPPQueuedAlert.md)
 - [Get-CIPPAppApprovalTemplates](./Docs/Get-CIPPAppApprovalTemplates.md)
@@ -693,21 +845,36 @@ You must enter that text exactly, otherwise the assignment does not trigger.
 - [Remove-CIPPCAPolicy](./Docs/Remove-CIPPCAPolicy.md)
 - [Remove-CIPPCATemplate](./Docs/Remove-CIPPCATemplate.md)
 - [Set-CIPPCAPolicy](./Docs/Set-CIPPCAPolicy.md)
+- [Get-CIPPGDAPContracts](./Docs/Get-CIPPGDAPContracts.md)
 - [Get-CIPPGDAPInvite](./Docs/Get-CIPPGDAPInvite.md)
+- [Get-CIPPGDAPRelationships](./Docs/Get-CIPPGDAPRelationships.md)
 - [Get-CIPPGDAPRoles](./Docs/Get-CIPPGDAPRoles.md)
+- [Get-CIPPGDAPServicePrincipals](./Docs/Get-CIPPGDAPServicePrincipals.md)
+- [Get-CIPPResellerRelationshipLink](./Docs/Get-CIPPResellerRelationshipLink.md)
 - [New-CIPPGDAPInvite](./Docs/New-CIPPGDAPInvite.md)
 - [Remove-CIPPGDAPRelationship](./Docs/Remove-CIPPGDAPRelationship.md)
+- [Get-CIPPGraphReports](./Docs/Get-CIPPGraphReports.md)
 - [Get-CIPPLicenses](./Docs/Get-CIPPLicenses.md)
+- [Get-CIPPLicensesReport](./Docs/Get-CIPPLicensesReport.md)
 - [Get-CIPPOAuthApps](./Docs/Get-CIPPOAuthApps.md)
 - [Get-CIPPServiceHealth](./Docs/Get-CIPPServiceHealth.md)
+- [Get-CIPPTestReports](./Docs/Get-CIPPTestReports.md)
+- [Get-CIPPTestResultsTenants](./Docs/Get-CIPPTestResultsTenants.md)
+- [Get-CIPPTests](./Docs/Get-CIPPTests.md)
+- [Get-CIPPAgent365PackageDetail](./Docs/Get-CIPPAgent365PackageDetail.md)
+- [Get-CIPPAgent365Packages](./Docs/Get-CIPPAgent365Packages.md)
 - [Get-CIPPBestPracticeAnalyser](./Docs/Get-CIPPBestPracticeAnalyser.md)
 - [Get-CIPPBPA](./Docs/Get-CIPPBPA.md)
 - [Get-CIPPBPATemplates](./Docs/Get-CIPPBPATemplates.md)
+- [Get-CIPPCopilotSettings](./Docs/Get-CIPPCopilotSettings.md)
+- [Get-CIPPCopilotUsage](./Docs/Get-CIPPCopilotUsage.md)
 - [Get-CIPPDomainAnalyser](./Docs/Get-CIPPDomainAnalyser.md)
 - [Get-CIPPDomainAnalyserList](./Docs/Get-CIPPDomainAnalyserList.md)
 - [Get-CIPPDomainHealth](./Docs/Get-CIPPDomainHealth.md)
+- [Get-CIPPShadowAI](./Docs/Get-CIPPShadowAI.md)
 - [Get-CIPPStandards](./Docs/Get-CIPPStandards.md)
 - [Get-CIPPStandardsCompare](./Docs/Get-CIPPStandardsCompare.md)
+- [Get-CIPPStandardsCurrentState](./Docs/Get-CIPPStandardsCurrentState.md)
 - [Get-CIPPStandardTemplates](./Docs/Get-CIPPStandardTemplates.md)
 - [Get-CIPPTenantAlignment](./Docs/Get-CIPPTenantAlignment.md)
 - [Get-CIPPTenantDrift](./Docs/Get-CIPPTenantDrift.md)
@@ -720,16 +887,15 @@ You must enter that text exactly, otherwise the assignment does not trigger.
 - [Get-CIPPExternalGEOIPLookup](./Docs/Get-CIPPExternalGEOIPLookup.md)
 - [Get-CIPPExternalTenantInfo](./Docs/Get-CIPPExternalTenantInfo.md)
 - [Get-CIPPGraphRequest](./Docs/Get-CIPPGraphRequest.md)
+
 ## Invoke-CIPPRestMethod
+
 - [Invoke-CIPPRestMethod](./Docs/Invoke-CIPPRestMethod.md)
+
 ## Set-CIPPAPIDetails
+
 - [Set-CIPPAPIDetails](./Docs/Set-CIPPAPIDetails.md)
 
 ##Special Thanks
 
 Special thanks to @KelvinTegelaar, @JohnDuprey, @rvdwegen and @Jr7468. I Could not have got this far without you!
-
-
-
-
-

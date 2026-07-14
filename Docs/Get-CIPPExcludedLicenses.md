@@ -1,8 +1,8 @@
 # Get-CIPPExcludedLicenses
 ## SYNOPSIS
-Retrieves the list of excluded licenses from CIPP.
+Lists license SKUs that have been excluded from CIPP license counts and reporting.
 ## DESCRIPTION
-The Get-CIPPExcludedLicenses function is used to retrieve the list of excluded licenses from CIPP. It sends a request to the API endpoint "/api/execexcludelicenses" with the parameter "List" set to "true" to get the excluded license list.
+Retrieves data from the CIPP API endpoint /api/ListExcludedLicenses.
 # PARAMETERS
 
 #### EXAMPLE 1

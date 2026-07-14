@@ -3,7 +3,7 @@
     Retrieves AutoPilot configuration information for a specified customer tenant ID and type.
 
 .DESCRIPTION
-    The Get-CIPPAutoPilotConfig function retrieves AutoPilot configuration information for a specified customer tenant ID and type. 
+    The Get-CIPPAutoPilotConfig function retrieves AutoPilot configuration information for a specified customer tenant ID and type.
     It makes a REST API call to the generic Graph request endpoint to retrieve the configuration data.
 
 .PARAMETER CustomerTenantID
@@ -30,13 +30,13 @@ function Get-CIPPAutoPilotConfig {
         [ValidateSet('ESP', 'ApProfile')]
         [string]$Type
     )
-    
+
     if ($Type -eq 'ESP') {
         Write-Verbose "Getting AutoPilot Status Page for $CustomerTenantID"
     } elseif ($Type -eq 'ApProfile') {
         Write-Verbose "Getting AutoPilot Profile for customer: $CustomerTenantID"
     }
-    
+
     $Endpoint = '/api/ListGraphRequest'
     $Params = @{
         tenantFilter = $CustomerTenantID
@@ -50,6 +50,6 @@ function Get-CIPPAutoPilotConfig {
         $Params['endpoint'] = 'deviceManagement/windowsAutopilotDeploymentProfiles'
         $Params['$expand'] = 'assignments'
     }
-        
+
     (Invoke-CIPPRestMethod -Endpoint $Endpoint -Params $Params).Results
 }

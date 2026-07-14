@@ -66,7 +66,7 @@ function GetCode {
     param (
         $Example
     )
-    $codeAndRemarks = (($Example | Out-String) -replace ($Example.title), '').Trim() -split "`r`n"|ForEach-Object{$_.Trim()}
+    $codeAndRemarks = @((($Example | Out-String) -replace ($Example.title), '').Trim() -split "`r`n"|ForEach-Object{$_.Trim()})
 
     $code = New-Object "System.Collections.Generic.List[string]"
     for ($i = 0; $i -lt $codeAndRemarks.Length; $i++) {
@@ -90,7 +90,7 @@ function GetRemark {
     param (
         $Example
     )
-    $codeAndRemarks = (($Example | Out-String) -replace ($Example.title), '').Trim() -split "`r`n"|ForEach-Object{$_.Trim()}
+    $codeAndRemarks = @((($Example | Out-String) -replace ($Example.title), '').Trim() -split "`r`n"|ForEach-Object{$_.Trim()})
 
     $isSkipped = $false
     $remark = New-Object "System.Collections.Generic.List[string]"

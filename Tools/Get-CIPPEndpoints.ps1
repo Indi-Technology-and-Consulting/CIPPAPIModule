@@ -3,8 +3,8 @@ Set-Location ..
 Set-Location ..
 
 
-$AllCippEndpoints = Get-ChildItem -Path 'CIPP-API\Modules\CIPPCore\Public' -Recurse -Filter 'Invoke-*.ps1' -File | Where-Object { $_.Name -notlike '*CIPPStandard*' }
-$AllCippApiModuleEndpoints = Get-ChildItem -Path 'CIPPAPIModule\CIPPAPIModule\public' -Recurse -File
+$AllCippEndpoints = Get-ChildItem -Path '.\CIPP-API\Modules\CIPPHTTP\Public' -Recurse -Filter 'Invoke-*.ps1' -File
+$AllCippApiModuleEndpoints = Get-ChildItem -Path '.\CIPPAPIModule\CIPPAPIModule\public' -Recurse -File
 
 $IgnoredEndpoints = @(
     'Invoke-ExecListAppId' # This endpoint is used in the SAM setup and it might be a bad idea to have it in the CIPP API Module

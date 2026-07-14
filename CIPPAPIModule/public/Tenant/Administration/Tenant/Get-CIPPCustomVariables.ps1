@@ -1,4 +1,4 @@
-﻿<#
+<#
 .SYNOPSIS
     Retrieves custom variables for a specified tenant from the CIPP system.
 
