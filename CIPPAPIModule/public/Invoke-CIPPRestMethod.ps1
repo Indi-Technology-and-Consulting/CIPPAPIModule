@@ -15,7 +15,7 @@
     Optional. The HTTP method to use for the request. The default value is 'GET'.
 
 .PARAMETER Body
-    Optional. A hashtable representing the request body. It will be converted to JSON before sending the request.
+    Optional. A hashtable representing the request body, or an array of hashtables for endpoints that expect a JSON array. It will be converted to JSON before sending the request.
 
 .PARAMETER ContentType
     Optional. The content type of the request body. The default value is 'application/json'.
@@ -41,7 +41,17 @@ function Invoke-CIPPRestMethod {
         [string]$Endpoint,
         [hashtable]$Params = @{},
         [ValidateSet('GET', 'POST')][string]$Method = 'GET',
-        [hashtable[]]$Body = @{},
+        [ValidateScript({
+            foreach ($item in $_) {
+                # Note: must be the real PSCustomObject class - the [PSCustomObject] accelerator
+                # aliases [PSObject], which matches everything inside ValidateScript.
+                if ($item -isnot [System.Collections.IDictionary] -and $item -isnot [System.Management.Automation.PSCustomObject]) {
+                    throw "Body must be a hashtable/PSCustomObject or an array of them, got [$($item.GetType().Name)]."
+                }
+            }
+            $true
+        })]
+        [object]$Body = @{},
         [string]$ContentType = 'application/json',
         [string]$Authorization = $null
     )

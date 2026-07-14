@@ -1,6 +1,6 @@
 ## What is this?
 
-This is the code for a [PowerShell](https://microsoft.com/powershell) module for [CIPP](https://cipp.app/). It is a work in progress, and only has about 207 out of the almost 350 API Endpoints built in. However, more will follow and it does have a generic 'Invoke-CIPPRestMethod' available so you can make any API call you want. See advanced usage examples below.
+This is the code for a [PowerShell](https://microsoft.com/powershell) module for [CIPP](https://cipp.app/). It is a work in progress, and only has about 350 out of the about 600 API Endpoints built in. However, more will follow and it does have a generic 'Invoke-CIPPRestMethod' available so you can make any API call you want. See advanced usage examples below.
 
 The module is written for [PowerShell 7](https://docs.microsoft.com/en-us/powershell/scripting/whats-new/what-s-new-in-powershell-71?view=powershell-7.1).
 
@@ -73,14 +73,15 @@ Some example scripts can be found Below:
 - [Get-AllTenants-SoftDeletedMailboxes.ps1](./Example%20Scripts/Get-AllTenants-SoftDeletedMailboxes.ps1)
 - [Get-AllTenants-LicensedUsers.ps1](./Example%20Scripts/Get-AllTenants-LicensedUsers.ps1)
 
-
 ## Assigning Yourself an Issue
 
-If you want to help by fixing a bug or implementing a feature request from an open issue, you can assign yourself the issue by creating a comment that says `I would like to work on this please!`. 
+If you want to help by fixing a bug or implementing a feature request from an open issue, you can assign yourself the issue by creating a comment that says `I would like to work on this please!`.
 You must enter that text exactly, otherwise the assignment does not trigger.
 
 # Cmdlet Help
+
 ## CIPP
+
 - Core
   - [Get-CIPPAccessCheck](./Docs/Get-CIPPAccessCheck.md)
   - [Get-CIPPAdminPortalLicenses](./Docs/Get-CIPPAdminPortalLicenses.md)
@@ -176,7 +177,9 @@ You must enter that text exactly, otherwise the assignment does not trigger.
 - [Set-CIPPPasswordSettings](./Docs/Set-CIPPPasswordSettings.md)
 - [Set-CIPPTenantGroup](./Docs/Set-CIPPTenantGroup.md)
 - [Get-CIPPPendingWebhooks](./Docs/Get-CIPPPendingWebhooks.md)
+
 ## Email
+
 - Administration
   - [Add-CIPPContact](./Docs/Add-CIPPContact.md)
   - [Add-CIPPExchConnector](./Docs/Add-CIPPExchConnector.md)
@@ -341,7 +344,9 @@ You must enter that text exactly, otherwise the assignment does not trigger.
 - [Remove-CIPPTransportRuleTemplate](./Docs/Remove-CIPPTransportRuleTemplate.md)
 - [Set-CIPPExchConnector](./Docs/Set-CIPPExchConnector.md)
 - [Set-CIPPTransportRule](./Docs/Set-CIPPTransportRule.md)
+
 ## Endpoint
+
 - Applications
   - [Get-CIPPApps](./Docs/Get-CIPPApps.md)
   - [Get-CIPPAppsRepository](./Docs/Get-CIPPAppsRepository.md)
@@ -418,7 +423,9 @@ You must enter that text exactly, otherwise the assignment does not trigger.
 - [Set-CIPPMEMPolicy](./Docs/Set-CIPPMEMPolicy.md)
 - [Sync-CIPPDEPTokens](./Docs/Sync-CIPPDEPTokens.md)
 - [Get-CIPPDevices](./Docs/Get-CIPPDevices.md)
+
 ## Extensions
+
 - HaloPSA
   - [Get-CIPPHaloClients](./Docs/Get-CIPPHaloClients.md)
   - [Set-CIPPExtensionMappingHaloPSA](./Docs/Set-CIPPExtensionMappingHaloPSA.md)
@@ -431,7 +438,9 @@ You must enter that text exactly, otherwise the assignment does not trigger.
 - [Set-CIPPExtensionMappingHaloPSA](./Docs/Set-CIPPExtensionMappingHaloPSA.md)
 - [Set-CIPPNinjaOneQueue](./Docs/Set-CIPPNinjaOneQueue.md)
 - [Get-CIPPExtensionsConfig](./Docs/Get-CIPPExtensionsConfig.md)
+
 ## Identity
+
 - Administration
   - [Devices](./Docs/Devices.md)
   - [Groups](./Docs/Groups.md)
@@ -526,7 +535,9 @@ You must enter that text exactly, otherwise the assignment does not trigger.
 - [Get-CIPPInactiveAccounts](./Docs/Get-CIPPInactiveAccounts.md)
 - [Get-CIPPMFAUsers](./Docs/Get-CIPPMFAUsers.md)
 - [Get-CIPPSignIns](./Docs/Get-CIPPSignIns.md)
+
 ## Security
+
 - Defender
   - [Get-CIPPDefenderOnboarding](./Docs/Get-CIPPDefenderOnboarding.md)
   - [Get-CIPPDefenderState](./Docs/Get-CIPPDefenderState.md)
@@ -554,13 +565,19 @@ You must enter that text exactly, otherwise the assignment does not trigger.
 - [Get-CIPPBreachesTenant](./Docs/Get-CIPPBreachesTenant.md)
 - [Get-CIPPBreachSearch](./Docs/Get-CIPPBreachSearch.md)
 - [Get-CIPPDeviceCompliance](./Docs/Get-CIPPDeviceCompliance.md)
+
 ## Settings
+
 - [Invoke-CIPPSchedulerBillingRun](./Docs/Invoke-CIPPSchedulerBillingRun.md)
+
 ## Teams
+
 - Voice
   - [Get-CIPPTeamsLisLocation](./Docs/Get-CIPPTeamsLisLocation.md)
 - [Get-CIPPTeamsLisLocation](./Docs/Get-CIPPTeamsLisLocation.md)
+
 ## Teams-Sharepoint
+
 - OneDrive
   - [Get-CIPPOneDriveList](./Docs/Get-CIPPOneDriveList.md)
   - [Set-CIPPOneDrivePerms](./Docs/Set-CIPPOneDrivePerms.md)
@@ -591,7 +608,9 @@ You must enter that text exactly, otherwise the assignment does not trigger.
 - [Get-CIPPTeams](./Docs/Get-CIPPTeams.md)
 - [Get-CIPPTeamsActivity](./Docs/Get-CIPPTeamsActivity.md)
 - [Get-CIPPTeamsVoice](./Docs/Get-CIPPTeamsVoice.md)
+
 ## Tenant
+
 - Administration
   - [Alerts](./Docs/Alerts.md)
   - [Applications](./Docs/Applications.md)
@@ -720,16 +739,15 @@ You must enter that text exactly, otherwise the assignment does not trigger.
 - [Get-CIPPExternalGEOIPLookup](./Docs/Get-CIPPExternalGEOIPLookup.md)
 - [Get-CIPPExternalTenantInfo](./Docs/Get-CIPPExternalTenantInfo.md)
 - [Get-CIPPGraphRequest](./Docs/Get-CIPPGraphRequest.md)
+
 ## Invoke-CIPPRestMethod
+
 - [Invoke-CIPPRestMethod](./Docs/Invoke-CIPPRestMethod.md)
+
 ## Set-CIPPAPIDetails
+
 - [Set-CIPPAPIDetails](./Docs/Set-CIPPAPIDetails.md)
 
 ##Special Thanks
 
 Special thanks to @KelvinTegelaar, @JohnDuprey, @rvdwegen and @Jr7468. I Could not have got this far without you!
-
-
-
-
-
