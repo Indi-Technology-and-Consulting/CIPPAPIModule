@@ -15,7 +15,7 @@
     Optional. The HTTP method to use for the request. The default value is 'GET'.
 
 .PARAMETER Body
-    Optional. A hashtable representing the request body. It will be converted to JSON before sending the request.
+    Optional. A hashtable representing the request body, or an array of hashtables for endpoints that expect a JSON array. It will be converted to JSON before sending the request.
 
 .PARAMETER ContentType
     Optional. The content type of the request body. The default value is 'application/json'.
@@ -41,7 +41,7 @@ function Invoke-CIPPRestMethod {
         [string]$Endpoint,
         [hashtable]$Params = @{},
         [ValidateSet('GET', 'POST')][string]$Method = 'GET',
-        [hashtable[]]$Body = @{},
+        [object]$Body = @{},
         [string]$ContentType = 'application/json',
         [string]$Authorization = $null
     )
