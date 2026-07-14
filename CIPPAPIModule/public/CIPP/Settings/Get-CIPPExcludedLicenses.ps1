@@ -1,31 +1,19 @@
 <#
 .SYNOPSIS
-Retrieves the list of excluded licenses from CIPP.
+    Lists license SKUs that have been excluded from CIPP license counts and reporting.
 
 .DESCRIPTION
-The Get-CIPPExcludedLicenses function is used to retrieve the list of excluded licenses from CIPP. It sends a request to the API endpoint "/api/execexcludelicenses" with the parameter "List" set to "true" to get the excluded license list.
-
-.PARAMETER None
-This function does not accept any parameters.
+    Retrieves data from the CIPP API endpoint /api/ListExcludedLicenses.
 
 .EXAMPLE
-Get-CIPPExcludedLicenses
-# Retrieves the list of excluded licenses from the CIPP API.
-
-.NOTES
-This function requires the Invoke-CIPPRestMethod function to be available in the current session.
+    Get-CIPPExcludedLicenses
 #>
-
 function Get-CIPPExcludedLicenses {
     [CmdletBinding()]
-    Param()
+    param ()
 
-    Write-Verbose 'Getting Excluded License List'
+    Write-Verbose 'Retrieving ListExcludedLicenses from the CIPP API'
 
-    $endpoint = '/api/ExecExcludeLicenses'
-    $params = @{
-        List = 'true'
-    }
-
-    Invoke-CIPPRestMethod -Endpoint $endpoint -Params $params
+    $endpoint = '/api/ListExcludedLicenses'
+    Invoke-CIPPRestMethod -Endpoint $endpoint
 }
