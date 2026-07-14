@@ -1,16 +1,16 @@
 # Get-CIPPAPDevices
 ## SYNOPSIS
-Retrieves AutoPilot devices for a specific customer tenant.
+Lists Windows Autopilot device identities registered in a tenant.
 ## DESCRIPTION
-The Get-CIPPAPDevices function retrieves AutoPilot devices for a specific customer tenant by making a REST API call to the "/api/listapdevices" endpoint.
+Retrieves data from the CIPP API endpoint /api/ListAPDevices.
 # PARAMETERS
 
 ## **-CustomerTenantID**
 > ![Foo](https://img.shields.io/badge/Type-String-Blue?) ![Foo](https://img.shields.io/badge/Mandatory-TRUE-Red?) \
-Specifies the ID of the customer tenant for which to retrieve AutoPilot devices.
+The customer tenant domain or GUID to query.
 
  #### EXAMPLE 1
 ```powershell
-PS > Get-CIPPAPDevices -CustomerTenantID "7ced1621-b8f7-4231-868c-bc6b1a2f1778"
+Get-CIPPAPDevices -CustomerTenantID '<CustomerTenantID>'
 ```
 

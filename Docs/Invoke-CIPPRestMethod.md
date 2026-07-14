@@ -18,8 +18,8 @@ Optional. A hashtable of query parameters to include in the request URL.
 Optional. The HTTP method to use for the request. The default value is 'GET'.
 
   ## **-Body**
-> ![Foo](https://img.shields.io/badge/Type-Hashtable[]-Blue?) ![Foo](https://img.shields.io/badge/Mandatory-FALSE-Green?) ![Foo](https://img.shields.io/badge/DefaultValue-@{}-Blue?color=5547a8)\
-Optional. A hashtable representing the request body. It will be converted to JSON before sending the request.
+> ![Foo](https://img.shields.io/badge/Type-Object-Blue?) ![Foo](https://img.shields.io/badge/Mandatory-FALSE-Green?) ![Foo](https://img.shields.io/badge/DefaultValue-@{}-Blue?color=5547a8)\
+Optional. A hashtable representing the request body, or an array of hashtables for endpoints that expect a JSON array. It will be converted to JSON before sending the request.
 
   ## **-ContentType**
 > ![Foo](https://img.shields.io/badge/Type-String-Blue?) ![Foo](https://img.shields.io/badge/Mandatory-FALSE-Green?) ![Foo](https://img.shields.io/badge/DefaultValue-application/json-Blue?color=5547a8)\
